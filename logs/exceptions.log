@@ -1,0 +1,286 @@
+{
+  error: OpenAIError: The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).
+      at new OpenAI (/home/shrihari/projects/AgenticChatbot/node_modules/openai/index.js:74:19)
+      at new ChatbotService (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:9:19)
+      at Object.<anonymous> (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:353:18)
+      at Module._compile (node:internal/modules/cjs/loader:1692:14)
+      at Object..js (node:internal/modules/cjs/loader:1824:10)
+      at Module.load (node:internal/modules/cjs/loader:1427:32)
+      at Module._load (node:internal/modules/cjs/loader:1250:12)
+      at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+      at Module.require (node:internal/modules/cjs/loader:1449:12),
+  level: 'error',
+  message: "uncaughtException: The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).\n" +
+    "Error: The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).\n" +
+    '    at new OpenAI (/home/shrihari/projects/AgenticChatbot/node_modules/openai/index.js:74:19)\n' +
+    '    at new ChatbotService (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:9:19)\n' +
+    '    at Object.<anonymous> (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:353:18)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1692:14)\n' +
+    '    at Object..js (node:internal/modules/cjs/loader:1824:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1427:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:1250:12)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1449:12)',
+  stack: "Error: The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).\n" +
+    '    at new OpenAI (/home/shrihari/projects/AgenticChatbot/node_modules/openai/index.js:74:19)\n' +
+    '    at new ChatbotService (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:9:19)\n' +
+    '    at Object.<anonymous> (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:353:18)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1692:14)\n' +
+    '    at Object..js (node:internal/modules/cjs/loader:1824:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1427:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:1250:12)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1449:12)',
+  exception: true,
+  date: 'Fri Aug 01 2025 15:56:32 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 227730,
+    uid: 1000,
+    gid: 1000,
+    cwd: '/home/shrihari/projects/AgenticChatbot',
+    execPath: '/home/shrihari/.nvm/versions/node/v24.4.1/bin/node',
+    version: 'v24.4.1',
+    argv: [
+      '/home/shrihari/.nvm/versions/node/v24.4.1/bin/node',
+      '/home/shrihari/projects/AgenticChatbot/server.js'
+    ],
+    memoryUsage: {
+      rss: 147980288,
+      heapTotal: 102920192,
+      heapUsed: 67561056,
+      external: 20704230,
+      arrayBuffers: 18264308
+    }
+  },
+  os: { loadavg: [ 2.14, 1.71, 1.39 ], uptime: 24253.98 },
+  trace: [
+    {
+      column: 19,
+      file: '/home/shrihari/projects/AgenticChatbot/node_modules/openai/index.js',
+      function: 'new OpenAI',
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/home/shrihari/projects/AgenticChatbot/services/chatbotService.js',
+      function: 'new ChatbotService',
+      line: 9,
+      method: null,
+      native: false
+    },
+    {
+      column: 18,
+      file: '/home/shrihari/projects/AgenticChatbot/services/chatbotService.js',
+      function: null,
+      line: 353,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1692,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Object..js',
+      line: 1824,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1427,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 1250,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:diagnostics_channel',
+      function: 'TracingChannel.traceSync',
+      line: 322,
+      method: 'traceSync',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapModuleLoad',
+      line: 235,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1449,
+      method: 'require',
+      native: false
+    }
+  ],
+  service: 'real-estate-chatbot',
+  timestamp: '2025-08-01 15:56:32'
+}
+{
+  error: OpenAIError: The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).
+      at new OpenAI (/home/shrihari/projects/AgenticChatbot/node_modules/openai/index.js:74:19)
+      at new ChatbotService (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:9:19)
+      at Object.<anonymous> (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:353:18)
+      at Module._compile (node:internal/modules/cjs/loader:1692:14)
+      at Object..js (node:internal/modules/cjs/loader:1824:10)
+      at Module.load (node:internal/modules/cjs/loader:1427:32)
+      at Module._load (node:internal/modules/cjs/loader:1250:12)
+      at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+      at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+      at Module.require (node:internal/modules/cjs/loader:1449:12),
+  level: 'error',
+  message: "uncaughtException: The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).\n" +
+    "Error: The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).\n" +
+    '    at new OpenAI (/home/shrihari/projects/AgenticChatbot/node_modules/openai/index.js:74:19)\n' +
+    '    at new ChatbotService (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:9:19)\n' +
+    '    at Object.<anonymous> (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:353:18)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1692:14)\n' +
+    '    at Object..js (node:internal/modules/cjs/loader:1824:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1427:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:1250:12)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1449:12)',
+  stack: "Error: The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).\n" +
+    '    at new OpenAI (/home/shrihari/projects/AgenticChatbot/node_modules/openai/index.js:74:19)\n' +
+    '    at new ChatbotService (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:9:19)\n' +
+    '    at Object.<anonymous> (/home/shrihari/projects/AgenticChatbot/services/chatbotService.js:353:18)\n' +
+    '    at Module._compile (node:internal/modules/cjs/loader:1692:14)\n' +
+    '    at Object..js (node:internal/modules/cjs/loader:1824:10)\n' +
+    '    at Module.load (node:internal/modules/cjs/loader:1427:32)\n' +
+    '    at Module._load (node:internal/modules/cjs/loader:1250:12)\n' +
+    '    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n' +
+    '    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n' +
+    '    at Module.require (node:internal/modules/cjs/loader:1449:12)',
+  exception: true,
+  date: 'Fri Aug 01 2025 15:57:04 GMT+0530 (India Standard Time)',
+  process: {
+    pid: 228438,
+    uid: 1000,
+    gid: 1000,
+    cwd: '/home/shrihari/projects/AgenticChatbot',
+    execPath: '/home/shrihari/.nvm/versions/node/v24.4.1/bin/node',
+    version: 'v24.4.1',
+    argv: [
+      '/home/shrihari/.nvm/versions/node/v24.4.1/bin/node',
+      '/home/shrihari/projects/AgenticChatbot/server.js'
+    ],
+    memoryUsage: {
+      rss: 148013056,
+      heapTotal: 103444480,
+      heapUsed: 67045792,
+      external: 20704230,
+      arrayBuffers: 18264308
+    }
+  },
+  os: { loadavg: [ 2, 1.71, 1.4 ], uptime: 24286.05 },
+  trace: [
+    {
+      column: 19,
+      file: '/home/shrihari/projects/AgenticChatbot/node_modules/openai/index.js',
+      function: 'new OpenAI',
+      line: 74,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: '/home/shrihari/projects/AgenticChatbot/services/chatbotService.js',
+      function: 'new ChatbotService',
+      line: 9,
+      method: null,
+      native: false
+    },
+    {
+      column: 18,
+      file: '/home/shrihari/projects/AgenticChatbot/services/chatbotService.js',
+      function: null,
+      line: 353,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._compile',
+      line: 1692,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Object..js',
+      line: 1824,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.load',
+      line: 1427,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module._load',
+      line: 1250,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'node:diagnostics_channel',
+      function: 'TracingChannel.traceSync',
+      line: 322,
+      method: 'traceSync',
+      native: false
+    },
+    {
+      column: 24,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'wrapModuleLoad',
+      line: 235,
+      method: null,
+      native: false
+    },
+    {
+      column: 12,
+      file: 'node:internal/modules/cjs/loader',
+      function: 'Module.require',
+      line: 1449,
+      method: 'require',
+      native: false
+    }
+  ],
+  service: 'real-estate-chatbot',
+  timestamp: '2025-08-01 15:57:04'
+}

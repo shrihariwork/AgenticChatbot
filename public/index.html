@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Real Estate - Bangalore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-building"></i>
+                    <span>Premium Real Estate</span>
+                </div>
+                <div class="header-actions">
+                    <button class="btn-secondary" onclick="showPropertySearch()">
+                        <i class="fas fa-search"></i>
+                        Search Properties
+                    </button>
+                    <button class="btn-primary" onclick="contactAgent()">
+                        <i class="fas fa-phone"></i>
+                        Contact Agent
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1>Find Your Dream Property in Bangalore</h1>
+                    <p>Discover premium residential and commercial properties with expert guidance from our AI-powered real estate consultant.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Properties</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Locations</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Interface -->
+            <section class="chat-section">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <div class="chat-title">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Real Estate Assistant</span>
+                        </div>
+                        <div class="chat-status">
+                            <span class="status-dot online"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- Welcome message -->
+                        <div class="message assistant">
+                            <div class="message-avatar">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-text">
+                                    Hello! I'm your premium real estate consultant for Bangalore. I can help you find the perfect property, whether it's a luxury apartment in Indiranagar, a commercial space in Koramangala, or an investment opportunity in Whitefield. What are you looking for today?
+                                </div>
+                                <div class="message-time">Just now</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-container">
+                        <div class="input-wrapper">
+                            <input type="text" id="messageInput" placeholder="Ask me about properties, locations, or market trends..." maxlength="1000">
+                            <button id="sendButton" class="send-btn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="suggested-actions" id="suggestedActions">
+                            <button class="action-btn" onclick="sendQuickMessage('I want to buy a 2BHK apartment in Indiranagar')">
+                                <i class="fas fa-home"></i>
+                                2BHK in Indiranagar
+                            </button>
+                            <button class="action-btn" onclick="sendQuickMessage('Show me commercial properties in Koramangala')">
+                                <i class="fas fa-building"></i>
+                                Commercial in Koramangala
+                            </button>
+                            <button class="action-btn" onclick="sendQuickMessage('What are the current market trends?')">
+                                <i class="fas fa-chart-line"></i>
+                                Market Trends
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Property Showcase -->
+            <section class="property-showcase" id="propertyShowcase" style="display: none;">
+                <div class="section-header">
+                    <h2>Featured Properties</h2>
+                    <p>Handpicked premium properties in prime locations</p>
+                </div>
+                <div class="property-grid" id="propertyGrid">
+                    <!-- Properties will be loaded here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Property Search Modal -->
+        <div class="modal" id="propertySearchModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Search Properties</h3>
+                    <button class="close-btn" onclick="closeModal('propertySearchModal')">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="propertySearchForm">
+                        <div class="form-group">
+                            <label>Property Type</label>
+                            <select id="propertyType">
+                                <option value="">Any Type</option>
+                                <option value="residential">Residential</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="luxury">Luxury</option>
+                                <option value="villa">Villa</option>
+                                <option value="apartment">Apartment</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" id="location" placeholder="e.g., Indiranagar, Koramangala">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Min Price (₹)</label>
+                                <input type="number" id="minPrice" placeholder="0">
+                            </div>
+                            <div class="form-group">
+                                <label>Max Price (₹)</label>
+                                <input type="number" id="maxPrice" placeholder="Any">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Bedrooms</label>
+                            <select id="bedrooms">
+                                <option value="">Any</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4+</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-search"></i>
+                                Search Properties
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Modal -->
+        <div class="modal" id="contactModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Contact Our Agent</h3>
+                    <button class="close-btn" onclick="closeModal('contactModal')">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <span>+91-9876543210</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>info@premiumrealestate.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Office</strong>
+                                <span>MG Road, Bangalore - 560001</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" id="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" id="contactPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="contactMessage" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>Processing your request...</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
